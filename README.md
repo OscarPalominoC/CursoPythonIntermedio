@@ -17,6 +17,10 @@
     * [Una alternativa: Anaconda](#una-alternativa-anaconda)
 3. [Alternativa a los ciclos: comprehensions](#alternativa-a-los-ciclos-comprehensions)
     * [Listas y diccionarios anidados](#listas-y-diccionarios-anidados)
+    * [List comprehensions](#list-comprehensions)
+    * [Dictionary comprehensions](#dictionary-comprehensions)
+4. [Conceptos avanzados de funciones](#conceptos-avanzados-de-funciones)
+    * [Funciones anónimas: lambda](#funciones-anónimas-lambda)
 
 ---
 
@@ -175,4 +179,64 @@ Y es un ambiente de trabajo para la ciencia de datos que permite hacer funcionar
 # Alternativa a los ciclos: comprehensions
 
 ## Listas y diccionarios anidados
+
+En esta clase vimos que podemos recorrer listas que contienes dicionarios y diccionarios que contienen listas.
+
+Otro punto a resaltar es que por convención se debe utilizar el idioma inglés.
+```py
+def main():
+    my_list = [1, 'Hello', True, 4.5]
+    my_dict = {'firstname':'Oscar','lastname':'Palomino'}
+    
+    super_list = [
+        {'firstname':'Oscar','lastname':'Palomino'},
+        {'firstname':'Eduardo','lastname':'Cardenas'},
+        {'firstname':'Lisney','lastname':'Gomez'},
+        {'firstname':'Jurenni','lastname':'Berdugo'},
+        {'firstname':'Ana','lastname':'Cardenas'},
+        {'firstname':'Doris','lastname':'Toscano'},
+    ]
+    
+    super_dict = {
+        'natural_nums':[1,2,3,4,5,6],
+        'integer_nums':[-1,-2,0,1,2],
+        'floating_nums':[1.1,2.5,5.7,7.3,9.7]
+    }
+    
+    for key, value in super_dict.items():
+        print(f"""
+Key: {key}
+  * Value: {value}""")
+    
+    for item in super_list:
+        print(item)
+
+
+if __name__ == '__main__':
+    main()
+```
+
+[Archivo local](/code/lists_and_dicts.py)
+
+## List comprehensions
+
+[List Comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
+
+![List comprehension](/images/list-comprehension.PNG)
+
+[Archivo local](/code/list_comprehension.py)
+
+## Dictionary comprehensions
+
+[PEP 274 -- Dict Comprehensions](https://www.python.org/dev/peps/pep-0274/)
+
+![Dict comprehension](/images/dictionary-comprehension.PNG)
+
+[Archivo local](/code/dictionary_comprehension.py)
+
+# Conceptos avanzados de funciones
+
+## Funciones anónimas: lambda
+
+**lambda**: Es una funcion que solo toma un argumento y su funcion es para abreviar hacer la sintaxys del codigo un poco mas ligera y ahorrar tiempo
 
