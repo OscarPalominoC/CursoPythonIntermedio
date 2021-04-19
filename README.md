@@ -32,8 +32,6 @@
 6. [Manejo de archivos](#manejo-de-archivos)
     * [¿Cómo trabajar con archivos?](#cómo-trabajar-con-archivos)
     * [Trabajando con archivos de texto en Python](#trabajando-con-archivos-de-texto-en-python)
-7. [Conclusión](#conclusión)
-    * [Reto final: Juego del Ahorcado o Hangman Game](#reto-final-juego-del-ahorcado-o-hangman-game)
 
 ---
 
